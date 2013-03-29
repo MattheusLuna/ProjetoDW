@@ -5,9 +5,20 @@
 	<title>
 		Acesso ao servidor
 	</title>
+	<style>
+		input[type=text]{
+			display: block;
+		}
+		input[type=submit]{
+			display: inline-block;
+			width: 250px;
+		}
+	</style>
 	<script type="text/javascript">
 		function conect(){
-
+			var ip = document.getElementById("ip").value;
+			var porta = document.getElementById("porta").value;
+			var user = document.getElementById("user").value;
 		}
 	</script>
 </head>
@@ -16,8 +27,8 @@
 	<!-- Restudar CSS para melhorar -->
 	<p></p><h1>Acesso via SSH</h1>
 	IP do Servidor: <input type='text' id='ip' name='ip' placeholder='Digite aqui o IP do servidor'/><br>
-	Porta do SSH: <input type='text' id='user' name='porta' placeholder="Digite aqui a porta do servidor"/><br>
+	Porta do SSH: <input type='text' id='porta' name='porta' placeholder="Digite aqui a porta do servidor"/><br>
 	Usuário para conectar <input type='text' id='user' name='user' placeholder="Digite aqui o IP do servidor"/><br>
-	<p><input type='submit' id='submit' name='Conectar' onclick='conect'/>
+	<p><input type='submit' id='submit' value='Conectar' onclick='conect'/>
 </body>
 </html>
